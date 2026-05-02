@@ -31,6 +31,23 @@ A super simple FastAPI application that allows students to view and sign up for 
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Get all activities with their details and current participant count |
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Sign up for an activity                                             |
+| DELETE | `/activities/{activity_name}/participants?email=student@mergington.edu` | Unregister a participant from an activity                           |
+
+## Backend Tests
+
+Tests are located in the top-level `tests/` directory and follow the AAA pattern (Arrange, Act, Assert).
+
+1. Install development dependencies:
+
+   ```
+   pip install -r requirements-dev.txt
+   ```
+
+2. Run tests:
+
+   ```
+   pytest -v
+   ```
 
 ## Data Model
 
